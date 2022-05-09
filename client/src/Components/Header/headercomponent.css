@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&family=Roboto:wght@300;400;700;900&display=swap');
+
+.header__area__aplicacion {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.id__usuario__aplicacion {
+	margin-right: 1rem;
+	position: relative;
+	top: 0px;
+}
+
+.logo__aplicacion {
+	margin-left: 0.5rem;
+	height: 1.7rem;
+	width: 1.7rem;
+}
+
+.area__avatar__aplicacion {
+	display: flex;
+	align-items: center;
+	margin-right: 1rem;
+}
+
+.logo__avatar__aplicacion {
+	margin-left: 1rem;
+}
+
+.nombre__avatar__aplicacion {
+	font-family: 'Roboto';
+	font-size: 16px;
+	font-weight: 400;
+	position: relative;
+	top: 1px;
+}

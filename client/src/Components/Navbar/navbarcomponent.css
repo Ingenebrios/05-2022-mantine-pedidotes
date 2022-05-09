@@ -1,0 +1,7 @@
+.pelota {
+	height: 70px;
+	width: 100%;
+	/* background-color: orange; */
+	border: 1px solid orange;
+	border-radius: 5px;
+}

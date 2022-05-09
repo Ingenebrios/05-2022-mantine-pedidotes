@@ -1,0 +1,10 @@
+.paper__record__individual {
+	margin-bottom: 1rem;
+	background-color: rgb(186, 254, 177);
+}
+
+.paper__parte__superior__historial {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}

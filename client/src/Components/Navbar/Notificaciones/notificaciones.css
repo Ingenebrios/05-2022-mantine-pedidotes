@@ -1,0 +1,24 @@
+.paper__notificacion__individual {
+	margin-bottom: 1rem;
+}
+
+.icono__notificacion {
+	margin-right: 1rem;
+	position: relative;
+	top: 2px;
+}
+
+.contenedor__codigo__fecha {
+	width: 100%;
+	/* background-color: red; */
+	display: flex;
+	justify-content: center;
+}
+
+.area__especifica__superior__notificacion {
+	display: flex;
+}
+
+.paper__notificacion__individual {
+	background-color: rgb(254, 227, 177);
+}
