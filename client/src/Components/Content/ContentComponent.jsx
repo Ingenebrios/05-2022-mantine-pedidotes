@@ -15,16 +15,26 @@ import Productos from './Productos/Productos.jsx'
 
 function ContentComponent() {
 
-	const [supermercado, setSupermercado] = useState('');
+	const [supermercado, setSupermercado] = useState();
+	const [categoria, setcategoria] = useState('carnes');
 
 	return (
 		<div className="content__container">
 			<Tabs grow position="apart" variant="outline">
 				<Tabs.Tab label="Supermercados" >
-					<Supermercados supermercado={supermercado} setSupermercado={setSupermercado} />
+
+
+					<Supermercados supermercado={supermercado} setSupermercado={setSupermercado} setCategoria={setcategoria} categoria={categoria} />
+
+
 				</Tabs.Tab>
 				<Tabs.Tab label="Productos" >
-					<Productos producto={supermercado} />
+
+
+					<Productos producto={supermercado} categoria={categoria} />
+
+
+
 				</Tabs.Tab>
 				<Tabs.Tab label="Settings" >Settings tab content</Tabs.Tab>
 			</Tabs>
