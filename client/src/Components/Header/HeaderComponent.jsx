@@ -29,8 +29,8 @@ const HeaderComponent = ({ setOpened, opened, user }) => {
 					<img src={LogoPedidotes} alt="logo_aplicacion" className="logo__aplicacion" />
 
 					<div className="area__avatar__aplicacion">
-						<Code className='id__usuario__aplicacion'>{user.id}</Code>
-						<Code className='id__usuario__aplicacion'>{user.correo}</Code>
+						{/* <Code className='id__usuario__aplicacion'>{user.id}</Code> */}
+						{/* <Code className='id__usuario__aplicacion'>{user.correo}</Code> */}
 						<Text className='nombre__avatar__aplicacion'>{user.nombre}</Text>
 						<Avatar color="orange" radius="xl" className="logo__avatar__aplicacion">{user.abreviacion}</Avatar>
 					</div>
