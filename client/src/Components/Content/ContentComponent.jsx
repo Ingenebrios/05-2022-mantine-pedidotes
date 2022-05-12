@@ -16,7 +16,7 @@ import Productos from './Productos/Productos.jsx'
 function ContentComponent() {
 
 	const [supermercado, setSupermercado] = useState();
-	const [categoria, setcategoria] = useState('carnes');
+	const [categoria, setcategoria] = useState([]);
 
 	return (
 		<div className="content__container">
