@@ -10,6 +10,7 @@ import {
 	Image,
 	Badge,
 	Button,
+	Divider,
 } from '@mantine/core';
 
 import Notificaciones from './Notificaciones/Notificaciones'
@@ -23,6 +24,10 @@ import { RiMessage3Line } from 'react-icons/ri'
 import './navbarcomponent.css'
 
 import imagen_uno from './navbarAssets/imagen1.png'
+
+import imagen_dos from './navbarAssets/imagen2.png'
+
+import imagen_tres from './navbarAssets/imagen3.png'
 
 const NavbarComponent = ({ opened, userID }) => {
 	return (
@@ -83,25 +88,80 @@ const NavbarComponent = ({ opened, userID }) => {
 
 					</Accordion>
 
+					<Text
+						className='ofertas__activas__texto'
+						weight={700}
+						align="center"
+						variant="gradient"
+						gradient={{ from: 'orange', to: 'yellow', deg: 45 }}
+					>Ofertas activas en Pedidotes</Text>
+
+
+					<Divider my="sm" variant="dotted" />
+
+
 					<div style={{ width: 340, margin: 'auto', marginTop: '10px' }}>
 						<Card shadow="sm" p="lg">
 							<Card.Section>
 								<Image src={imagen_uno} height={160} alt="Norway" />
 							</Card.Section>
 
-							<Group position="apart" style={{ marginBottom: 5 }}>
-								<Text weight={500}>Norway Fjord Adventures</Text>
+							<Group position="apart" className='infor__recomendacion__individual' style={{ marginBottom: 5 }}>
+								<Text weight={500}>La Torre Free Delivery</Text>
 								<Badge color="pink" variant="light">
-									On Sale
+									13 Mayo
 								</Badge>
 							</Group>
 
 							<Text size="sm">
-								La Torre Free Delivery
+								Ordena con La Torre hoy 13 de mayo en ordenes mayores a 50Q y recibe un 100% de descuento en tu envio.
 							</Text>
 
 							<Button variant="light" color="blue" fullWidth style={{ marginTop: 14 }}>
-								Book classic tour now
+								Ordenar!
+							</Button>
+						</Card>
+					</div>
+
+					<div style={{ width: 340, margin: 'auto', marginTop: '10px' }}>
+						<Card shadow="sm" p="lg">
+							<Card.Section>
+								<Image src={imagen_dos} height={160} alt="Norway" className='imagen_prueba' />
+							</Card.Section>
+
+							<Group position="apart" className='infor__recomendacion__individual' style={{ marginBottom: 5 }}>
+								<Text weight={500}>Walmart Ropa</Text>
+								<Badge color="pink" variant="light">
+									10 a 15 de MAYO
+								</Badge>
+							</Group>
+
+							<Text size="sm">
+								Toda la ropa tiene un descuento empezando desde el 30% para arriba durante esta semana!
+							</Text>
+
+							<Button variant="light" color="blue" fullWidth style={{ marginTop: 14 }}>
+								Ver ropa!
+							</Button>
+						</Card>
+					</div>
+
+					<div style={{ width: 340, margin: 'auto', marginTop: '10px' }}>
+						<Card shadow="sm" p="lg">
+							<Card.Section>
+								<Image src={imagen_tres} height={160} alt="Norway" className='imagen_prueba' />
+							</Card.Section>
+
+							<Group position="apart" className='infor__recomendacion__individual' style={{ marginBottom: 5 }}>
+								<Text weight={500}>Pedidotes Coupons</Text>
+							</Group>
+
+							<Text size="sm">
+								Recibe un 5% de reembolso en todas tus compras en linea que hagas con nosotros arriba de un rango de 200Q! Estos cupones pueden ser utilizados en tus siguientes compras.
+							</Text>
+
+							<Button variant="light" color="blue" fullWidth style={{ marginTop: 14 }}>
+								Mas info.
 							</Button>
 						</Card>
 					</div>
