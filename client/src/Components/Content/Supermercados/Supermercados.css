@@ -18,6 +18,10 @@
   }
 }
 
+.AutoSupermercado{
+  width:100%;
+}
+
 .supermercado {
   position: absolute;
   left: -30px;

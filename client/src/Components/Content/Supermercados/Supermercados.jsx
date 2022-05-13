@@ -34,17 +34,28 @@ const imagenes = [
 
 const Supermercados = ({ supermercado, setSupermercado, setCategoria, categoria }) => {
 
+	const categoriaUnica = []
+
+	categoria.map(categoria => {
+		if (categoriaUnica.indexOf(categoria) === -1) {
+			categoriaUnica.push(categoria);
+		}
+	})
+	console.log(categoria)
+
+	console.log(categoriaUnica)
+
 	return (
 		<div className="SupermercadoContainer">
 			<Autocomplete
 				value={supermercado} onChange={setSupermercado}
 				label="Seleccione el supermercado de su eleccion."
-				placeholder="Supermaercados"
+				placeholder="Supermercados"
 				data={['La Torre', 'Paiz', 'Walmart', 'PriceSmart', 'Maxi Despensa']}
 				className="AutoSupermercado"
 			/>
 			{
-				categoria.map(badge => {
+				categoriaUnica.map(badge => {
 					return (
 							<Badge className="badge">
 								{badge}
@@ -53,6 +64,7 @@ const Supermercados = ({ supermercado, setSupermercado, setCategoria, categoria 
 									strokeWidth={2}
 									color={'black'}
 									className="letterX"
+									onClick={console.log("click2")}
 								/>
 							</Badge>
 					);
