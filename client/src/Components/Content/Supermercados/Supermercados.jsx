@@ -33,7 +33,7 @@ const imagenes = [
 ]
 
 const Supermercados = ({ supermercado, setSupermercado, setCategoria, categoria }) => {
-	console.log(categoria)
+
 	return (
 		<div className="SupermercadoContainer">
 			<Autocomplete
@@ -51,8 +51,8 @@ const Supermercados = ({ supermercado, setSupermercado, setCategoria, categoria 
 								<LetterX
 									size={15}
 									strokeWidth={2}
-								color={'black'}
-								className="letterX"
+									color={'black'}
+									className="letterX"
 								/>
 							</Badge>
 					);
