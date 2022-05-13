@@ -40,8 +40,8 @@
   left: 30px;
   width: 330px;
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
-  grid-column-gap: 62px;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 72px;
   grid-row-gap: 40px;
 }
 
