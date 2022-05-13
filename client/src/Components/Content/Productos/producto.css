@@ -1,0 +1,58 @@
+.caja_info{
+    margin-top: 10px;
+    position: absolute;
+    left: 17%;
+    width: 60%;
+    height: 12%;
+    background-color: black;
+    /* Light */
+    border-radius: 10px;
+    
+}
+.boton_izquierda{
+    position: absolute;
+    border-radius: 10px 0px 0px 10px;
+    background: linear-gradient(180deg, #E68804 0%, #D14A3B 100%);
+    width: 35%;
+    height: 100%;
+}
+.boton_derecha{
+    position: absolute;
+    background: linear-gradient(180deg, #E68804 0%, #D14A3B 100%);
+    border-radius: 0px 10px 10px 0px;
+    height: 100%;
+    width: 35%;
+    left: 65%;
+}
+.boton_menos{
+    position: absolute;
+    top: 2%;
+    left: 35%;
+    font-size: 30px;
+    color: aliceblue;
+    border: 2px solid transparent;
+    background-color: transparent;
+}
+.boton_mas{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    font-size: 25px;
+    color: aliceblue;
+    border: 2px solid transparent;
+    background-color: transparent;
+}
+.cuenta{
+    position: absolute;
+    background-color: aliceblue;
+    height: 100%;
+    width: 30%;
+    left: 35%;
+
+}
+.dato{
+    position: absolute;
+    font-size: 30px;
+    top: -60%;
+    left: 35%;
+}
