@@ -13,6 +13,8 @@ import Supermercados from './Supermercados/Supermercados.jsx'
 
 import Productos from './Productos/Productos.jsx'
 
+import Democarta from './Productos/carnes.jsx';
+
 function ContentComponent() {
 
 	const [supermercado, setSupermercado] = useState();
@@ -32,6 +34,7 @@ function ContentComponent() {
 
 
 					<Productos producto={supermercado} categoria={categoria} />
+					<Democarta/>
 
 
 
