@@ -15,7 +15,8 @@ import {
 	Badge,
 	Modal,
 	Button,
-	Group
+	Group,
+	Notification,
 } from '@mantine/core';
 
 import { db } from '../../../config/firebase-config'
@@ -69,29 +70,12 @@ const Historial = ({ id }) => {
 				(historialEspecifico.length > 0) &&
 				historialEspecifico.map(record => {
 					return (
-						<Paper shadow="lg" radius="md" p="md" className='paper__record__individual' key={record.id}>
-							<div className="paper__parte__superior__historial">
-								<Text>{record.supermercado}</Text>
-								<Badge color="teal">{record.costo + "$"}</Badge>
-							</div>
-							<Modal
-								withCloseButton={false}
-								opened={opened}
-								onClose={() => setOpened(false)}
-								title="Productos adquiridos en esta compra:"
-							>
-								{record.informacion.split(',').map(producto => {
-									return (
-										<Text>{producto}</Text>
-									)
-								})}
-							</Modal>
+						<Notification color="indigo" title={record.supermercado} disallowClose key={record.id} className="mensaje__individual">
+							{record.informacion}
 							<Divider my="sm" variant="dashed" />
-							<Group position="center">
-								<Button variant="subtle" color="cyan" onClick={() => setOpened(true)}>Informacion de la compra</Button>
-							</Group>
-
-						</Paper>
+							<Badge color="teal">{record.costo + "$"}</Badge>
+							<Badge color="lime">Reordenar</Badge>
+						</Notification>
 					)
 				})
 			}

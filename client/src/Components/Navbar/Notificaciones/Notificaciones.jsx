@@ -14,6 +14,7 @@ import {
 	Divider,
 	Code,
 	ScrollArea,
+	Notification,
 } from '@mantine/core';
 
 import { db } from '../../../config/firebase-config'
@@ -66,65 +67,48 @@ const Notificaciones = ({ id }) => {
 		<div>
 			{(notificacionesEspecificas.length > 0) && notificacionesEspecificas.map(notificacion => {
 				return (
-					<Paper shadow="lg" radius="md" p="md" className='paper__notificacion__individual' key={notificacion.id}>
-						<div className="notificacion__individual">
-							<div className="area__notificacion">
-								{
-									(notificacion.categoria === 'setting')
-										?
-										<div className="area__especifica__superior__notificacion" >
-											<Settings className='icono__notificacion'
-												size={20}
-												strokeWidth={2}
-												color={'#194b4d'}
-											/>
-											<Text>Settings</Text>
-										</div>
-										:
-										<div className="area__especifica__superior__notificacion" >
-											<ShoppingCart className='icono__notificacion'
-												size={20}
-												strokeWidth={2}
-												color={'#194b4d'}
-											/>
-											<Text>Compras</Text>
-										</div>
-								}
-								<Divider my="sm" variant="dashed" />
-								{
-									notificacion.estado
-										?
-										<div className="area__especifica__superior__notificacion" >
-											<Check className='icono__notificacion'
-												size={20}
-												strokeWidth={2}
-												color={'#5abf40'}
-											/>
-											<Text>Completado</Text>
-										</div>
-										:
-										<div className="area__especifica__superior__notificacion" >
-											<X className='icono__notificacion'
-												size={20}
-												strokeWidth={2}
-												color={'#bf4041'}
-											/>
-											<Text>Error</Text>
-										</div>
-								}
-								<Divider my="sm" variant="dashed" />
-								<Text>{notificacion.informacion}</Text>
-								<Divider my="sm" variant="dashed" />
+					// <Paper shadow="lg" radius="md" p="md" className='paper__notificacion__individual' key={notificacion.id}
+					// 	style={{ backgroundColor: notificacion.estado ? 'rgb(186, 254, 177)' : 'rgb(254, 177, 177)' }}>
+					// 	<div className="notificacion__individual">
+					// 		<div className="area__notificacion">
+					// 			{
 
-								<motion.div className="contenedor__codigo__fecha" whileHover={{ scale: 1.3 }}>
-									<Code>{
-										// console.log(new Date(notificaciones[i].fecha.seconds * 1000).toLocaleString())
-										new Date(notificacion.fecha.seconds * 1000).toLocaleString()}
-									</Code>
-								</motion.div>
+					// 			}
+					// 			<Divider my="sm" variant="dashed" />
+					// 			{
+
+					// 			}
+
+
+					<Notification
+						color={notificacion.estado ? 'green' : 'red'}
+						title={notificacion.estado ? 'Completado' : 'Error'}
+						disallowClose
+						key={notificacion.id}
+						className="mensaje__individual">
+						{notificacion.informacion}
+						<Divider my="sm" variant="dashed" />
+						{(notificacion.categoria === 'setting')
+							?
+							<div  >
+								<Settings className='icono__notificacion'
+									size={20}
+									strokeWidth={2}
+									color={'#194b4d'}
+								/>
 							</div>
-						</div>
-					</Paper>
+							:
+							<div >
+								<ShoppingCart className='icono__notificacion'
+									size={20}
+									strokeWidth={2}
+									color={'#194b4d'}
+								/>
+							</div>}
+						<Code>{
+							new Date(notificacion.fecha.seconds * 1000).toLocaleString()}
+						</Code>
+					</Notification>
 				)
 			})}
 		</div>
